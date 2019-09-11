@@ -1,0 +1,38 @@
+action: bootstrap, msg: getenv
+cwd: C:\Users\Guillermo\Documents\GitHub\aomie
+cmd: 'C:\Users\Guillermo\Documents\GitHub\aomie\.tox\bootstrap\Scripts\python.EXE' -m pip install jinja2 matrix tox
+Collecting jinja2
+  Using cached https://files.pythonhosted.org/packages/1d/e7/fd8b501e7a6dfe492a433deb7b9d833d39ca74916fa8bc63dd1a4947a671/Jinja2-2.10.1-py2.py3-none-any.whl
+Collecting matrix
+  Using cached https://files.pythonhosted.org/packages/45/aa/93fb05f2c12279f758f63fc45790168197abf3ec4ecd2162b31176cacfc3/matrix-2.0.1-py2.py3-none-any.whl
+Collecting tox
+  Using cached https://files.pythonhosted.org/packages/a7/0c/ed234b83d2c4fcef1cfccf97371183d51dafae62e64334de34d0a6333114/tox-3.14.0-py2.py3-none-any.whl
+Collecting MarkupSafe>=0.23 (from jinja2)
+  Using cached https://files.pythonhosted.org/packages/65/c6/2399700d236d1dd681af8aebff1725558cddfd6e43d7a5184a675f4711f5/MarkupSafe-1.1.1-cp37-cp37m-win_amd64.whl
+Collecting configparser2>=4.0.0 (from matrix)
+Collecting packaging>=14 (from tox)
+  Using cached https://files.pythonhosted.org/packages/ec/22/630ac83e8f8a9566c4f88038447ed9e16e6f10582767a01f31c769d9a71e/packaging-19.1-py2.py3-none-any.whl
+Collecting six<2,>=1.0.0 (from tox)
+  Using cached https://files.pythonhosted.org/packages/73/fb/00a976f728d0d1fecfe898238ce23f502a721c0ac0ecfedb80e0d88c64e9/six-1.12.0-py2.py3-none-any.whl
+Collecting importlib-metadata<1,>=0.12; python_version < "3.8" (from tox)
+  Using cached https://files.pythonhosted.org/packages/ba/15/29e4fe1624373be313b5a2565d72ca9121a37f40472112f46eda8dc1235b/importlib_metadata-0.22-py2.py3-none-any.whl
+Collecting virtualenv>=14.0.0 (from tox)
+  Using cached https://files.pythonhosted.org/packages/8b/12/8d4f45b8962b03ac9efefe5ed5053f6b29334d83e438b4fe379d21c0cb8e/virtualenv-16.7.5-py2.py3-none-any.whl
+Collecting pluggy<1,>=0.12.0 (from tox)
+  Using cached https://files.pythonhosted.org/packages/92/c7/48439f7d5fd6bddb4c04b850bb862b42e3e2b98570040dfaf68aedd8114b/pluggy-0.13.0-py2.py3-none-any.whl
+Collecting toml>=0.9.4 (from tox)
+  Using cached https://files.pythonhosted.org/packages/a2/12/ced7105d2de62fa7c8fb5fce92cc4ce66b57c95fb875e9318dba7f8c5db0/toml-0.10.0-py2.py3-none-any.whl
+Collecting filelock<4,>=3.0.0 (from tox)
+  Using cached https://files.pythonhosted.org/packages/93/83/71a2ee6158bb9f39a90c0dea1637f81d5eef866e188e1971a1b1ab01a35a/filelock-3.0.12-py3-none-any.whl
+Collecting py<2,>=1.4.17 (from tox)
+  Using cached https://files.pythonhosted.org/packages/76/bc/394ad449851729244a97857ee14d7cba61ddb268dce3db538ba2f2ba1f0f/py-1.8.0-py2.py3-none-any.whl
+Collecting attrs (from packaging>=14->tox)
+  Using cached https://files.pythonhosted.org/packages/23/96/d828354fa2dbdf216eaa7b7de0db692f12c234f7ef888cc14980ef40d1d2/attrs-19.1.0-py2.py3-none-any.whl
+Collecting pyparsing>=2.0.2 (from packaging>=14->tox)
+  Using cached https://files.pythonhosted.org/packages/11/fa/0160cd525c62d7abd076a070ff02b2b94de589f1a9789774f17d7c54058e/pyparsing-2.4.2-py2.py3-none-any.whl
+Collecting zipp>=0.5 (from importlib-metadata<1,>=0.12; python_version < "3.8"->tox)
+  Using cached https://files.pythonhosted.org/packages/74/3d/1ee25a26411ba0401b43c6376d2316a71addcc72ef8690b101b4ea56d76a/zipp-0.6.0-py2.py3-none-any.whl
+Collecting more-itertools (from zipp>=0.5->importlib-metadata<1,>=0.12; python_version < "3.8"->tox)
+  Using cached https://files.pythonhosted.org/packages/45/dc/3241eef99eb45f1def35cf93af35d1cf9ef4c0991792583b8f33ea41b092/more_itertools-7.2.0-py3-none-any.whl
+Installing collected packages: MarkupSafe, jinja2, configparser2, matrix, attrs, pyparsing, six, packaging, more-itertools, zipp, importlib-metadata, virtualenv, pluggy, toml, filelock, py, tox
+Successfully installed MarkupSafe-1.1.1 attrs-19.1.0 configparser2-4.0.0 filelock-3.0.12 importlib-metadata-0.22 jinja2-2.10.1 matrix-2.0.1 more-itertools-7.2.0 packaging-19.1 pluggy-0.13.0 py-1.8.0 pyparsing-2.4.2 six-1.12.0 toml-0.10.0 tox-3.14.0 virtualenv-16.7.5 zipp-0.6.0
