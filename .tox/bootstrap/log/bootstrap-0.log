@@ -1,9 +1,0 @@
-action: bootstrap, msg: getenv
-cwd: C:\Users\Guillermo\Documents\GitHub\aomie\.tox
-cmd: 'c:\users\guillermo\.venvs\dev\scripts\python.exe' -m virtualenv --no-download --python 'c:\users\guillermo\.venvs\dev\scripts\python.exe' bootstrap
-Running virtualenv with interpreter c:\Python37\python.exe
-Already using interpreter c:\Python37\python.exe
-Using base prefix 'c:\\Python37'
-New python executable in C:\Users\Guillermo\Documents\GitHub\aomie\.tox\bootstrap\Scripts\python.exe
-Installing setuptools, pip, wheel...
-done.

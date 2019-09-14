@@ -1,12 +1,17 @@
-
 from click.testing import CliRunner
 
-from aomie.cli import fetch
+from aomie.cli import fetch, cli
 
 
-def test_fetch():
+def test_help():
     runner = CliRunner()
-    result = runner.invoke(fetch, [])
+    result = runner.invoke(cli, ['--help'])
 
     assert result.exit_code == 0
-    # assert result.output == '()\n'
+
+
+def test_version():
+    runner = CliRunner()
+    result = runner.invoke(cli, ['--version'])
+
+    assert result.exit_code == 0

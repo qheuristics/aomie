@@ -23,24 +23,6 @@ from aomie import __version__
 from aomie.handling import (download_files, extract_files, insert_files,
                             fetch_files)
 
-class Config(object):
-
-    def __init__(self, spec=None):
-        self.spec = spec
-        if spec:
-            self.config = toml.load(spec)
-        else:
-            self.config = {}
-        self.verbose = False
-
-    def set_config(self, key, value):
-        self.config[key] = value
-        if self.verbose:
-            click.echo('  config[%s] = %s' % (key, value), file=sys.stderr)
-
-    def __repr__(self):
-        return '<Config %r>' % self.spec
-
 
 @click.group(invoke_without_command=True)
 @click.pass_context
