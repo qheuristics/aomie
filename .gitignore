@@ -60,3 +60,5 @@ doc/
 # Visual Studio Code
 .vscode
 
+htmlcov
+

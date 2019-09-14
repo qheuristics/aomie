@@ -58,7 +58,21 @@ Overview
 
 .. end-badges
 
-Python 3 open source library to handle Iberian electricity market data published by OMIE.
+aomie is a Python 3 open source library that helps you handle Iberian electricity market data published by OMIE.
+
+Over 80 statistical indicators of historical data of the Iberian electricity market are published at
+http://www.omie.es/aplicaciones/datosftp/datosftp.jsp. These indicators are available as downloadable zip files
+containing text files of daily data with different levels of aggregation (e.g. by bidding unit or technology).
+To analyse these indicators over time or to make comparison between them you need to follow these steps:
+
+- Download all the data files covering the time horizon of interest
+- Extract the daily text files from the downloaded zip files
+- Combine the content of potentially thousands of files
+
+aomie automates this workflow. It  downloads all files of the required metric over a user-specified
+time period, unzips the downloaded files and inserts their content into a SQLite database. Once in the database,
+data analysis can be conveniently performed using SQLite directly or with tools such as pandas in Python or
+dplyr in R.
 
 * Free software: MIT license
 
@@ -79,7 +93,7 @@ https://aomie.readthedocs.io/
 Development
 ===========
 
-To run the all tests run::
+To run all the tests run::
 
     tox
 

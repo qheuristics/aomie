@@ -1,12 +1,12 @@
 
 from click.testing import CliRunner
 
-from aomie.cli import main
+from aomie.cli import fetch
 
 
-def test_main():
+def test_fetch():
     runner = CliRunner()
-    result = runner.invoke(main, [])
+    result = runner.invoke(fetch, [])
 
-    assert result.output == '()\n'
     assert result.exit_code == 0
+    # assert result.output == '()\n'
