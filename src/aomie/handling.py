@@ -31,12 +31,14 @@ _skip_read_csv = partial(pd.read_csv, sep=';', skipfooter=1, header=None,
                          dtype=dtype)
 
 
-def download_files(servername, fichero, path, listfile, **kwargs):
+def download_files(servername, fichero, path, start, end, **kwargs):
     fileroot = f'/datosPub/{fichero}/'
+    os.makedirs(os.path.dirname(path), exist_ok=True)
 
-    with open(listfile) as f:
-        items = f.read().splitlines()
-
+    items=[*map('pdbf_{}.zip'.format,
+                pd.date_range(start=pd.to_datetime(str(start),format='%Y%m'),
+                              end=pd.to_datetime(str(end), format='%Y%m'),
+                              freq='MS').strftime('%Y%m'))]
     for item in items:
         filename = fileroot + item
         localname = path + item
@@ -44,8 +46,7 @@ def download_files(servername, fichero, path, listfile, **kwargs):
         print(remoteaddr)
         urllib.request.urlretrieve(remoteaddr, localname)
 
-    print()
-    print('Downloaded %s files to %s' % (str(len(items)), path[:-1]))
+    print('\nDownloaded %s files to %s' % (str(len(items)), path[:-1]))
 
 
 def extract_files(path, **kwargs):
@@ -62,8 +63,7 @@ def extract_files(path, **kwargs):
 
 def gather_files(sources, destination, remove=False):
     """Move files in sources to destination."""
-    if not os.path.exists(destination):
-        os.makedirs(destination)
+    os.makedirs(destination, exist_ok=True)
     for s in sources:
         _move_files(s, destination)
         if remove:
@@ -102,8 +102,8 @@ def insert_files(path, filter_unit, dbname, fichero, delatstart=True,
             print(pd.read_sql(f'select * from {fichero}', conn))
 
 
-def fetch_files(path, fichero, filter_unit, dbname, servername, listfile,
+def fetch_files(path, fichero, filter_unit, dbname, servername, start, end,
                 **kwargs):
-    download_files(servername, fichero, path, listfile)
+    download_files(servername, fichero, path, start, end)
     extract_files(path)
     insert_files(path, filter_unit, dbname, fichero)
