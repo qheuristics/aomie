@@ -14,6 +14,7 @@ Overview
         | |codecov|
     * - package
       - | |version| |wheel| |supported-versions| |supported-implementations|
+        | |commits-since|
 .. |docs| image:: https://readthedocs.org/projects/aomie/badge/?style=flat
     :target: https://readthedocs.org/projects/aomie
     :alt: Documentation Status
@@ -37,6 +38,10 @@ Overview
 .. |version| image:: https://img.shields.io/pypi/v/aomie.svg
     :alt: PyPI Package latest release
     :target: https://pypi.org/project/aomie
+
+.. |commits-since| image:: https://img.shields.io/github/commits-since/qheuristics/aomie/v0.0.0.svg
+    :alt: Commits since latest release
+    :target: https://github.com/qheuristics/aomie/compare/v0.0.0...master
 
 .. |wheel| image:: https://img.shields.io/pypi/wheel/aomie.svg
     :alt: PyPI Wheel
