@@ -14,7 +14,6 @@ Overview
         | |codecov|
     * - package
       - | |version| |wheel| |supported-versions| |supported-implementations|
-        | |commits-since|
 .. |docs| image:: https://readthedocs.org/projects/aomie/badge/?style=flat
     :target: https://readthedocs.org/projects/aomie
     :alt: Documentation Status
@@ -39,10 +38,6 @@ Overview
     :alt: PyPI Package latest release
     :target: https://pypi.org/project/aomie
 
-.. |commits-since| image:: https://img.shields.io/github/commits-since/qheuristics/aomie/v0.0.0.svg
-    :alt: Commits since latest release
-    :target: https://github.com/qheuristics/aomie/compare/v0.0.0...master
-
 .. |wheel| image:: https://img.shields.io/pypi/wheel/aomie.svg
     :alt: PyPI Wheel
     :target: https://pypi.org/project/aomie
@@ -58,7 +53,7 @@ Overview
 
 .. end-badges
 
-aomie is a Python 3 open source library that helps you handle Iberian electricity market data published by OMIE.
+aomie is a pure Python 3 open source library that helps you handle Iberian electricity market data published by OMIE.
 
 Over 80 statistical indicators of historical data of the Iberian electricity market are published at
 http://www.omie.es/aplicaciones/datosftp/datosftp.jsp. These indicators are available as downloadable zip files
@@ -232,10 +227,15 @@ From this help we learn that we can download and extract in a single step by typ
 
     omie download -e
 
+TIP: you can save your self some typing in the command line replacing omie with om,
+e.g. like this
+
+::
+
+    om download -e
 
 Documentation
 =============
-
 
 https://aomie.readthedocs.io/
 

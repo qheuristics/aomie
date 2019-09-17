@@ -47,10 +47,6 @@ tests/__pycache__/
 .project
 .pydevproject
 
-# Sphinx documentation
-doc/_build/
-doc/
-
 # Eclipse Oxygen
 .settings
 

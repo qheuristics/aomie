@@ -27,7 +27,7 @@ setup(
     name='aomie',
     version='0.0.0',
     license='MIT',
-    description='Python 3 open source library to handle Iberian electricity market data published by OMIE.',
+    description='Pure Python 3 open source library to handle Iberian electricity market data published by OMIE.',
     long_description='%s\n%s' % (
         re.compile('^.. start-badges.*^.. end-badges', re.M | re.S).sub('', read('README.rst')),
         re.sub(':[a-z]+:`~?(.*?)`', r'``\1``', read('CHANGELOG.rst'))
@@ -59,14 +59,13 @@ setup(
         'Issue Tracker': 'https://github.com/qheuristics/aomie/issues',
     },
     keywords=[
-        # eg: 'keyword1', 'keyword2', 'keyword3',
+        'OMIE', 'electricity market', 'data handling',
     ],
-    python_requires='>=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*',
+    python_requires='>=3.6',
     install_requires=[
         'click',
         'toml',
         'pandas',
-        # eg: 'aspectlib==1.1.1', 'six>=1.7',
     ],
     extras_require={
         # eg:
@@ -74,10 +73,12 @@ setup(
         #   ':python_version=="2.6"': ['argparse'],
     },
     setup_requires=[
+        'wheel',
     ],
     entry_points={
         'console_scripts': [
             'omie = aomie.cli:cli',
+            'om = aomie.cli:cli',
         ]
     },
 )
