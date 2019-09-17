@@ -37,6 +37,10 @@ nosetests.xml
 coverage.xml
 .pytest_cache/
 
+# Sphinx documentation
+docs/*.txt
+docs/_build
+
 tests/__pycache__/
 
 # Translations

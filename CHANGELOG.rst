@@ -6,3 +6,4 @@ Changelog
 ------------------
 
 * First release on GitHub.
+* First release on PyPI (2019-09-17)

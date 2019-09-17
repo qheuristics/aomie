@@ -86,36 +86,6 @@ Import the aomie library into your Python libraries, scripts or applications as 
     import aomie
 
 amoie includes a succint command line interface that make OMIE data handling extremely easy.
-
-From the command line help:
-
-.. raw:: html
-
-        <div>
-        <PRE>
-        <B>AOMIE</B>                         User Commands                        <B>AOMIE</B>
-
-        Usage: omie [OPTIONS] COMMAND [ARGS]...
-
-          aomie: OMIE electricity market data handling tool
-
-        Options:
-          --version               Display version.
-          -f, --config-file TEXT  Configuration file name and location.
-          -d, --display-config    Display configuration
-          -c, --config KEY VALUE  Overrides a config key/value pair.
-          -v, --verbose           Enables verbose mode.
-          --help                  Show this message and exit.
-
-        Commands:
-          download  Download OMIE data.
-          extract   Extract data from zip files.
-          fetch     Download, extract and insert files into database.
-          insert    Insert data into SQLite database.
-
-        </PRE></div>
-
-
 Some usage examples follow.
 
 A typical aomie starts by jointly setting the required configuration parameters through
@@ -151,25 +121,6 @@ To check the current configuration settings type
 
     omie -d
 
-This will return something like this
-
-.. raw:: html
-
-        <div>
-        <PRE>
-        &lt;Config OrderedDict([('servername', 'www.omel.es'),
-                     ('fichero', 'pdbf'),
-                     ('start', 200501),
-                     ('end', 200512),
-                     ('path', '_data3/'),
-                     ('dbname', 'test2.db3'),
-                     ('filter_unit',
-                      ['BES5',
-                       'CTN4',
-                       'PGR5',
-                       'ECT2'])])&gt;
-        </PRE></div>
-
 Once the zip files have been downloaded we can extract them like this
 
 ::
@@ -201,25 +152,6 @@ aomie commands such as download type
 ::
 
     omie download --help
-
-to display this
-
-.. raw:: html
-
-        <div>
-        <PRE>
-        <B>AOMIE</B>                         User Commands                        <B>AOMIE</B>
-
-        Usage: omie download [OPTIONS]
-
-          Download OMIE files to local destination.
-
-        Options:
-          -e, --extract  Extract downloaded files.
-          --help         Show this message and exit.
-
-        </PRE></div>
-
 
 From this help we learn that we can download and extract in a single step by typing
 

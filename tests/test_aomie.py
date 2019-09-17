@@ -1,6 +1,6 @@
 from click.testing import CliRunner
 
-from aomie.cli import fetch, cli
+from aomie.cli import cli
 
 
 def test_help():

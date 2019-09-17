@@ -14,9 +14,9 @@ Why does this file exist, and why not put this in __main__?
 
   Also see (1) from http://click.pocoo.org/5/setuptools/#setuptools-integration
 """
-import sys
 import os
 import shutil
+import sys
 from collections import OrderedDict
 from pprint import pformat
 
@@ -24,10 +24,12 @@ import click
 import toml
 
 from aomie import __version__
-from aomie.handling import (download_files, extract_files, insert_files,
-                            fetch_files)
+from aomie.handling import download_files
+from aomie.handling import extract_files
+from aomie.handling import fetch_files
+from aomie.handling import insert_files
 
-TML = '.omie\omie.toml'
+TML = '.omie\\omie.toml'
 
 MSGNOCFG = ('No amoie configuration available.\n'
             'Type omie --help for information about '

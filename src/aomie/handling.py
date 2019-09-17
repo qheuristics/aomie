@@ -1,14 +1,13 @@
-import os
-import zipfile
-import shutil
 import glob
+import os
+import shutil
 import sqlite3
 import urllib.request
+import zipfile
 from functools import partial
 
 import numpy as np
 import pandas as pd
-
 
 dtype = {'year': np.int32, 'month': np.int32, 'day': np.int32,
          'hour': np.int32, 'unit': str, 'energy': np.float64,
@@ -35,10 +34,11 @@ def download_files(servername, fichero, path, start, end, **kwargs):
     fileroot = f'/datosPub/{fichero}/'
     os.makedirs(os.path.dirname(path), exist_ok=True)
 
-    items=[*map('pdbf_{}.zip'.format,
-                pd.date_range(start=pd.to_datetime(str(start),format='%Y%m'),
-                              end=pd.to_datetime(str(end), format='%Y%m'),
-                              freq='MS').strftime('%Y%m'))]
+    items = [*map('pdbf_{}.zip'.format,
+                  pd.date_range(start=pd.to_datetime(str(start),
+                                                     format='%Y%m'),
+                                end=pd.to_datetime(str(end), format='%Y%m'),
+                                freq='MS').strftime('%Y%m'))]
     for item in items:
         filename = fileroot + item
         localname = path + item
